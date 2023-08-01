@@ -8,6 +8,14 @@ body{
   }
 
 
+.sections{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/***************************** Header *****************************/
 
 .header{
     display: flex;
@@ -17,14 +25,12 @@ body{
     color:white;
 }
 
-
-
-
 .header-title{
     font-size: 24px;
     color:#F9FAF8; 
+    white-space: nowrap;
+  overflow: hidden;
 }
-
 
 .header-links{
     display: flex;
@@ -32,41 +38,18 @@ body{
     color:white;
 }
 
-.sections{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+.header, .section1{
+    padding-left: 12.5%;
+    padding-right: 12.5%;
 }
 
-ul {
-    list-style-type: none;
-    display: flex;
-    gap: 15px;
-
-  }
-
-
-a{
-    display: flex;
-    text-decoration: none;
-    color: white;
-    
-    justify-content: center;
-}
-
-
-
+/***************************** Section 1 *****************************/
 .section1{
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #1F2937;
     padding-bottom: 30px;
-}
-
-.header, .section1{
-    padding-left: 200px;
-    padding-right: 200px;
 }
 
 .section1-title{
@@ -85,51 +68,28 @@ a{
     display: flex;
     flex-direction: column;
     width: 400px;
+    min-width: 400px;
     height: 300px;
     justify-content: flex-start;
     padding-bottom: 100px;
     gap: 5px;
 }
 
-img {
-    width: auto;
-    height: 300px;
-}
-
-button, .footer{
-    padding: 8px 16px;
-    border-radius: 8px;
-    background-color: #3882F6;
-    color: white;
-}
-
-button{
-    width: 100px;
-    border-radius: 8px;
-    
-}
+/***************************** Section 2 *****************************/
 
 
 .section2{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 100px;
 }
 
-.section3{
+.section2-fotos{
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
-}
-
-.footer{
-    display: flex;
-    
-    flex-shrink: 0;
-}
-
-.footer-textbox{
-    display: flex;
-    justify-content: space-between;
 }
 
 .section2-header{
@@ -138,9 +98,10 @@ button{
     font-weight: 900;
 }
 
+
+/***************************** Section 3 *****************************/
+
 .section3{
-    display: flex;
-    flex-direction: column;
     background-color: #E5E7EB;
 }
 
@@ -150,6 +111,10 @@ button{
     padding-left: 30%;
     padding-right: 30%;
     flex-direction: column;
+    margin: 2% auto;
+    width: 40%;
+    min-width: 40%;
+    flex: 1 5 auto;
 }
 
 .section3-quote{
@@ -158,6 +123,7 @@ button{
     color:#1F2937;
     font-style: italic;
     justify-content: flex-start;
+    margin-bottom: 2%;
     
 }
 
@@ -165,9 +131,113 @@ button{
     display: flex;
     justify-content: flex-end;
     font-weight: 700;
+    font-size: 22px;
 }
+
+
+
+/***************************** Footer *****************************/
 
 .footer{
-    display: flex;
-
+    padding-bottom: 10px;
+    margin: 50px auto;
+    width: 75%;
+    max-width: 75%;
 }
+
+
+.footer-textbox{
+    display: flex;
+    justify-content: space-between;
+    margin: auto 7%;
+}
+
+.footer-left{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    max-width: 70%;
+}
+
+.footer-right{
+    align-self: center;
+}
+
+.footer-text{
+    margin-top: 0.5%;
+}
+
+.footer-header{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 0.5%;
+}
+
+
+/***************************** General *****************************/
+
+img {
+    width: auto;
+    height: 300px;
+}
+
+.square-fotos {
+
+    height: 180px;
+    width: 180px;
+    border: 4px solid;
+    border-color: #3882F6;
+    border-radius: 10%;
+}
+
+.foto-text{
+    display: flex;
+    flex-direction: column;
+    max-width: 200px;
+    margin: 20px;
+    gap: 10px;
+}
+
+button, .footer{
+    padding: 8px 16px;
+    border-radius: 8px;
+    background-color: #3882F6;
+    color: white;
+}
+
+button, .sign-up-bottom{
+    width: 100px;
+    height: 35px;
+    max-width: 100px;
+    max-height: 35px;
+    border: 0px;
+}
+
+.sign-up-bottom{
+    border: 2px solid;
+    border-color: white;
+    align-self: center;
+    margin-right: 7%;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+  }
+
+a{
+    display: flex;
+    text-decoration: none;
+    color: white;
+    justify-content: center;
+}
+
+
+
+
+/**********************************************************/
+
+
+
+
